@@ -9,10 +9,10 @@ const assertEqual = function(actual, expected) {
 // Function to return the tail of an array (every element except the head)
 
 const tail = function(array) {
-  let newArray = [];
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] !== array[0]) {
-      newArray.push(array[i]);
+  const newArray = [];
+  for (let element of array) {
+    if (element !== array[0]) {
+      newArray.push(element);
     }
   }
 
