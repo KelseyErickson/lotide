@@ -8,6 +8,8 @@ const eqArrays = function(array1, array2) {
   return outcome;
 };
 
+// Function that uses eqArrays to print a message indicating if two arrays are equal or not
+
 const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2) === true) {
     console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
