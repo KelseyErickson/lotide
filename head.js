@@ -6,6 +6,9 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+// Function that returns the head of an array
+// Otherwise return undefined
+
 const head = function(array) {
   if (array[0]) {
     return array[0];
@@ -14,7 +17,7 @@ const head = function(array) {
   }
 };
 
-// TEST CODE 
+// Test Code using assertEqual function to test if the returned item is the head
 
 assertEqual(head([5,6,7]), 5);
 assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
