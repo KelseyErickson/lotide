@@ -6,6 +6,8 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+// Function to return the tail of an array (every element except the head)
+
 const tail = function(array) {
   let newArray = [];
   for (let i = 0; i < array.length; i++) {
@@ -35,7 +37,7 @@ assertEqual(oneElement.length, 0);
 assertEqual(oneElement[0], 'One');
 console.log(oneElement);
 
-//Test Case Three
+// Test Case Three
 const emptyArray = tail([]);
 assertEqual(emptyArray.length, 0);
 assertEqual(emptyArray[0], 'test');
