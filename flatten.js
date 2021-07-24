@@ -16,6 +16,9 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
+// Function to return a 'flattened' version of an array
+// If it is a nested array it will un-nest the elements
+
 const flatten = function(array) {
   let flattenArray = [];
   for (let element of array) {
