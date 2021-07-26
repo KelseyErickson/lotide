@@ -1,8 +1,12 @@
 const eqArrays = function(array1, array2) {
   let outcome = true;
   for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      outcome = false;
+    if (array1.length === array2.length) {
+      if (array1[i] !== array2[i]) {
+        outcome = false;
+      }
+    } else {
+      return false;
     }
   }
   return outcome;
@@ -18,3 +22,5 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
+
+assertArraysEqual([1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5])
