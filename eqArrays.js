@@ -16,7 +16,7 @@ const eqArrays = function(array1, array2) {
         outcome = false;
       }
     } else {
-      return false;
+      outcome = false;
     }
   }
   return outcome;
