@@ -7,16 +7,17 @@ const assertEqual = function(actual, expected) {
 };
 
 
+// Function to take in a collection of items and return a count for a specific subset of those items
 
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
 
-  for (const item of allItems) {
-    if (itemsToCount[item]) {
-      if (results[item]) {
+  for (const item of allItems) { // To itterate through the allItems array
+    if (itemsToCount[item]) { // If the name is in itemsToCount and...
+      if (results[item]) { // If the name is already in results object - then add another count to the result
         results[item] += 1;
       } else {
-        results[item] = 1;
+        results[item] = 1; // If the name is not already in the results then it will just equal 1
       }
     }
   }
