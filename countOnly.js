@@ -12,7 +12,7 @@ const assertEqual = function(actual, expected) {
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
 
-  for (const item of allItems) { // To itterate through the allItems array
+  for (const item of allItems) { // To iterate through the allItems array
     if (itemsToCount[item]) { // If the name is in itemsToCount and...
       if (results[item]) { // If the name is already in results object - then add another count to the result
         results[item] += 1;
