@@ -7,24 +7,24 @@ const assertEqual = function(actual, expected) {
 };
 
 
-const countLetters = function (sentence) {
+const countLetters = function(sentence) {
   const results = {};
 
-  for (const letter of sentence){
-    if(letter != ' '){
-      if(results[letter]){
-       results[letter] += 1
+  for (const letter of sentence) {
+    if (letter !== ' ') {
+      if (results[letter]) {
+        results[letter] += 1;
       } else {
-        results[letter] = 1
+        results[letter] = 1;
       }
     }
 
   }
-  console.log(results);
- return results;
+  
+  return results;
 };
 
-// Test one 
+// Test one
 
 const result1 = countLetters('A Sentence');
 // These should all pass
@@ -36,10 +36,10 @@ assertEqual(result1['t'], 1);
 assertEqual(result1['c'], 1);
 
 // Test 2
-const result2 = countLetters('lighthouse in the house');
+const result2 = countLetters('Lighthouse in the house');
 
 // These should all pass
-assertEqual(result2['l'], 1);
+assertEqual(result2['L'], 1);
 assertEqual(result2['i'], 2);
 assertEqual(result2['g'], 1);
 assertEqual(result2['h'], 4);
