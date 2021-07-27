@@ -1,7 +1,11 @@
 const eqArrays = function(array1, array2) {
   let outcome = true;
   for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
+    if (array1.length === array2.length) {
+      if (array1[i] !== array2[i]) {
+        outcome = false;
+      }
+    } else {
       outcome = false;
     }
   }
@@ -30,7 +34,7 @@ const without = function(sourceArray, itemsToRemoveArray) {
 
 };
 
-// Test Cases 
+// Test Cases
 
 console.log(without([1, 2, 3], [1,]));// => [2, 3]
 console.log(without([1, 1, 2, 3, 1, 4], [1, 4]));// => [2, 3]
