@@ -26,16 +26,15 @@ const assertArraysEqual = function(array1, array2) {
 
 const letterPositions = function(sentence) {
   const results = {};
-  const indexArray = [];
   
-  for (let i = 0; i < sentence.length; i++){
+  for (let i = 0; i < sentence.length; i++) {
     if (sentence[i] !== ' ') {
       if (!results[sentence[i]]) { // if there is not the letter in the object we add an array with it's index
         results[sentence[i]] = [i];
       } else {
         results[sentence[i]].push(i); // if the letter is already in the object we access the already existing array and push the index to that array
       }
-    }  
+    }
   }
 
   return results;
@@ -44,7 +43,7 @@ const letterPositions = function(sentence) {
 
 
 
-// TEST CODE 
+// TEST CODE
 
 //Test 1
 
@@ -64,7 +63,7 @@ assertArraysEqual(result1['o'], [4]);
 const result2 = letterPositions('Lighthouse in the house');
 
 // These should all pass
-console.log('Count for \'Lighthouse in the house\'');
+console.log('Results for \'Lighthouse in the house\'');
 assertArraysEqual(result2['L'], [0]);
 assertArraysEqual(result2['i'], [1, 11]);
 assertArraysEqual(result2['g'], [2]);
