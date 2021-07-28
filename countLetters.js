@@ -6,16 +6,17 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+// Function to count how many of each letter is in a string and return that information as an object
 
 const countLetters = function(sentence) {
   const results = {};
 
   for (const letter of sentence) {
-    if (letter !== ' ') {
+    if (letter !== ' ') { // Skipping any spaces
       if (results[letter]) {
-        results[letter] += 1;
+        results[letter] += 1; // if there is already this letter in the object we add one to the count
       } else {
-        results[letter] = 1;
+        results[letter] = 1; // if there is not already this letter in the object we add the initial count
       }
     }
 
