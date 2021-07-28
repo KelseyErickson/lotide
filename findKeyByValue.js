@@ -11,10 +11,17 @@ const assertEqual = function(actual, expected) {
 // If there is no value found will return undefined
 
 const findKeyByValue = function(object, value) {
-  for (const key in object) {
-    console.log(key);
-  }
 
+  for (const key in object) {
+    const result = '';
+      if (object[key] === value){
+        result = key;
+      } else {
+        result = undefined;
+      }
+    }
+
+    return result;
 };
 
 const bestTVShowsByGenre = { 
