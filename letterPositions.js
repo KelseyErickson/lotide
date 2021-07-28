@@ -22,6 +22,7 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
+// Function to return the indexes of an string as an object
 
 const letterPositions = function(sentence) {
   const results = {};
@@ -29,15 +30,13 @@ const letterPositions = function(sentence) {
   
   for (let i = 0; i < sentence.length; i++){
     if (sentence[i] !== ' ') {
-      if (!results[sentence[i]]) {
+      if (!results[sentence[i]]) { // if there is not the letter in the object we add an array with it's index
         results[sentence[i]] = [i];
       } else {
-        results[sentence[i]].push(i);
+        results[sentence[i]].push(i); // if the letter is already in the object we access the already existing array and push the index to that array
       }
     }  
   }
-
-  console.log(results);
 
   return results;
 
