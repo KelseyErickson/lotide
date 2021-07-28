@@ -28,6 +28,7 @@ const countLetters = function(sentence) {
 
 const result1 = countLetters('A Sentence');
 // These should all pass
+console.log('Count for \'A Sentence\'');
 assertEqual(result1['A'], 1);
 assertEqual(result1['S'], 1);
 assertEqual(result1['e'], 3);
@@ -39,6 +40,7 @@ assertEqual(result1['c'], 1);
 const result2 = countLetters('Lighthouse in the house');
 
 // These should all pass
+console.log('Count for \'Lighthouse in the house\'');
 assertEqual(result2['L'], 1);
 assertEqual(result2['i'], 2);
 assertEqual(result2['g'], 1);
