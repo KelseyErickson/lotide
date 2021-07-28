@@ -27,23 +27,53 @@ const letterPositions = function(sentence) {
   const results = {};
   const indexArray = [];
   
-  for(let i = 0; i < sentence.length; i++){
+  for (let i = 0; i < sentence.length; i++){
     if (sentence[i] !== ' ') {
       if (!results[sentence[i]]) {
         results[sentence[i]] = [i];
       } else {
         results[sentence[i]].push(i);
-  
       }
-    } 
-    
+    }  
   }
 
-  console.log(results)
+  console.log(results);
 
   return results;
 
 };
 
 
-assertArraysEqual(letterPositions('hello'), [0, 1, 2, 3, 4]);
+
+// TEST CODE 
+
+//Test 1
+
+const result1 = letterPositions('hello');
+
+// All these tests should pass
+
+console.log('Results for \'hello\'');
+assertArraysEqual(result1['h'], [0]);
+assertArraysEqual(result1['e'], [1]);
+assertArraysEqual(result1['l'], [2, 3]);
+assertArraysEqual(result1['o'], [4]);
+
+
+// Test 2
+
+const result2 = letterPositions('Lighthouse in the house');
+
+// These should all pass
+console.log('Count for \'Lighthouse in the house\'');
+assertArraysEqual(result2['L'], [0]);
+assertArraysEqual(result2['i'], [1, 11]);
+assertArraysEqual(result2['g'], [2]);
+assertArraysEqual(result2['h'], [3, 5, 15, 18]);
+assertArraysEqual(result2['t'], [4, 14]);
+assertArraysEqual(result2['o'], [6, 19]);
+assertArraysEqual(result2['u'], [7, 20]);
+assertArraysEqual(result2['s'], [8, 21]);
+assertArraysEqual(result2['e'], [9, 16, 22]);
+assertArraysEqual(result2['n'], [12]);
+
