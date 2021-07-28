@@ -26,5 +26,13 @@ const assertArraysEqual = function(array1, array2) {
 const letterPositions = function(sentence) {
   const results = {};
   
+  for(let i = 0; i < sentence.length; i++){
+    console.log(i);
+  }
+  
+
   return results;
 };
+
+
+assertArraysEqual(letterPositions('hello'), [0, 1, 2, 3, 4]);
