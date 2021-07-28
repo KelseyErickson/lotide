@@ -6,29 +6,24 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// Function that takes an object and a value. 
-// Will scan the object and return the first key with contains the given value. 
-// If there is no value found will return undefined
+// Function that takes an object and a value.
+// Will scan the object and return the first key with contains the given value.
+// If there is no value found will return undefined.
 
 const findKeyByValue = function(object, value) {
  
   for (const key in object) {
-    
-      if (object[key] === value){
-        console.log(object[key])
-        console.log(value)
-         return key;
-      }
+    if (object[key] === value) {
+      return key;
     }
-   
-  
+  }
 };
 
 // Test Cases
 
 //Test 1
 
-const bestTVShowsByGenre = { 
+const bestTVShowsByGenre = {
   sci_fi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama:  "The Wire"
@@ -39,10 +34,10 @@ assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
 
 //Test 2
 
-const bestMusicByGenre = { 
+const bestMusicByGenre = {
   industrial: "Nine Inch Nails",
   nuMetal: "System of a Down",
-  pop:  "Everything Everything", 
+  pop:  "Everything Everything",
   experimental: "The Dillinger Escape Plan"
 };
 
