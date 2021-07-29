@@ -36,3 +36,8 @@ const eqObjects = function (object1, object2) {
   return true;
 };
 
+// Function to take two objects and log a message to assert if the objects are equal
+
+const assertObjectsEqual = function(actual, expected){
+
+};
