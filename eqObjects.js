@@ -6,6 +6,20 @@ const assertEqual = function (actual, expected) {
   }
 };
 
+const eqArrays = function(array1, array2) {
+  let outcome = true;
+  for (let i = 0; i < array1.length; i++) {
+    if (array1.length === array2.length) {
+      if (array1[i] !== array2[i]) {
+        outcome = false;
+      }
+    } else {
+      outcome = false;
+    }
+  }
+  return outcome;
+};
+
 // function that returns true if both objects have identical keys with identical values
 // Otherwise returns false
 
@@ -18,10 +32,20 @@ const eqObjects = function (object1, object2) {
     return false;
   }
   for (const key of keysObject1) {
-    if (object1[key] !== object2[key]) {
-      return false;
+    
+    if(Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+      if(eqArrays(object1[key], object2[key])) {
+
+        return true;
+      } else if (object1[key] !== object2[key]) {
+          return false;
+        } 
+
       }
+     
     }
+
+    
 
     return true;
   }; 
