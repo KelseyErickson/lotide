@@ -38,6 +38,16 @@ const eqObjects = function (object1, object2) {
 
 // Function to take two objects and log a message to assert if the objects are equal
 
-const assertObjectsEqual = function(actual, expected){
+const assertObjectsEqual = function(actual, expected) {
+  if (eqObjects(actual, expected) === true) {
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+  } else if (eqArrays(actual, expected) === false) {
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+  }
 
 };
+
+console.log('ab vs ba:')
+const ab = { a: '1', b: '2' };
+const ba = { b: '2', a: '1' };
+assertObjectsEqual(ab,ba);
