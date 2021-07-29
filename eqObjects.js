@@ -6,7 +6,7 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-const eqArrays = function(array1, array2) {
+const eqArrays = function (array1, array2) {
   let outcome = true;
   for (let i = 0; i < array1.length; i++) {
     if (array1.length === array2.length) {
@@ -26,30 +26,24 @@ const eqArrays = function(array1, array2) {
 const eqObjects = function (object1, object2) {
   const keysObject1 = Object.keys(object1);
   const keysObject2 = Object.keys(object2);
-  
+
 
   if (!(keysObject1.length === keysObject2.length)) {
     return false;
   }
   for (const key of keysObject1) {
-    
-    if(Array.isArray(object1[key]) && Array.isArray(object2[key])) {
-      if(eqArrays(object1[key], object2[key])) {
-
-        return true;
-      } else if (object1[key] !== object2[key]) {
-          return false;
-        } 
-
+    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+      if (!eqArrays(object1[key], object2[key])) {
+        return false;
       }
-     
+    } else if (object1[key] !== object2[key]) {
+      return false;
     }
+  }
 
-    
+  return true;
+};
 
-    return true;
-  }; 
- 
 console.log('ab vs ba:')
 const ab = { a: '1', b: '2' };
 const ba = { b: '2', a: '1' };
