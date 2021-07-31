@@ -1,15 +1,14 @@
 const eqArrays = function(array1, array2) {
-  let outcome = true;
-  for (let i = 0; i < array1.length; i++) {
-    if (array1.length === array2.length) {
-      if (array1[i] !== array2[i]) {
-        outcome = false;
-      }
-    } else {
-      outcome = false;
-    }
+  if (array1.length !== array2.length) {
+    return false;
   }
-  return outcome;
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] !== array2[i]) {
+        return false;
+      }
+    
+  }
+  return true;
 };
 
 const assertArraysEqual = function(array1, array2) {
@@ -45,6 +44,6 @@ console.log(without([true, false, false, 'Hello', 25, 'Hello', 47], [false, 'Hel
 const words = ["hello", "world", "lighthouse"];
 without(words,["lighthouse"]);
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
-console.log(without([true, false, false, 'Hello', 25, 'Hello', 47], [false, 'Hello']));
+
 
 
