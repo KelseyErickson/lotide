@@ -24,7 +24,7 @@ const assertArraysEqual = function(array1, array2) {
 
 // Function will take an array to map and a callback function
 
-const map = function(array, callback) {
+const map = (array, callback) => {
   const results = [];
 
   for (let item of array) {
