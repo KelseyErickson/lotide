@@ -10,7 +10,7 @@ const assertEqual = function(actual, expected) {
 // It will scan the object and return the first key for which the call back returns a truthy value
 // If no key is found it will return undefined
 
-const findKey = function(object, callback) {
+const findKey = (object, callback) => {
   for (const key in object) {
     if (callback(object[key])) {
       return key;
