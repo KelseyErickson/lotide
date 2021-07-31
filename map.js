@@ -4,8 +4,8 @@ const eqArrays = function(array1, array2) {
   }
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] !== array2[i]) {
-        return false;
-      }
+      return false;
+    }
     
   }
   return true;
@@ -32,7 +32,7 @@ const map = function(array, callback) {
   }
 
   return results;
-}
+};
 
 // Test 1
 
@@ -49,4 +49,8 @@ assertArraysEqual(results2, [2, 4, 6, 8, 10, 12]); // Should Pass
 
 const results3 = map([], num => num * 2);
 assertArraysEqual(results3, []); // Should Pass
+
+// Test 4
+const results4 = map([1], num => num + ' String');
+assertArraysEqual(results4, ['1 String']); // Should Pass
 
