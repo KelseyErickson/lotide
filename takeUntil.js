@@ -1,12 +1,15 @@
 // Function will take in two parameters - an array and a callback function
-// Return a slice of the array with elements taken from the beginning an dwill continue untile the callback returns a truthy value
+// Return a slice of the array with elements taken from the beginning and will continue until the callback returns a truthy value
 
 
 const takeUntil = function(array, callback) {
   let results = [];
   for (element of array){
-    
+    if (callback(element)) {
+      results = array.slice(0, array.indexOf(element));
+    }
   }
+  return results;
 };
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
