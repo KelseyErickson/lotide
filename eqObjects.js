@@ -1,4 +1,4 @@
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -6,7 +6,7 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-const eqArrays = function (array1, array2) {
+const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
   }
@@ -22,7 +22,7 @@ const eqArrays = function (array1, array2) {
 // function that returns true if both objects have identical keys with identical values
 // Otherwise returns false
 
-const eqObjects = function (object1, object2) {
+const eqObjects = function(object1, object2) {
   const keysObject1 = Object.keys(object1);
   const keysObject2 = Object.keys(object2);
 
@@ -38,11 +38,11 @@ const eqObjects = function (object1, object2) {
         return false;
       }
     } else if (!Array.isArray(object1[key]) && (typeof (object1[key])) === 'object') {
-      if (!eqObjects(object1[key], object2[key])){
-        return false
+      if (!eqObjects(object1[key], object2[key])) {
+        return false;
       }
     } else {
-      if(object1[key] !== object2[key]) {// else if the key values are not arrays then compare the primitive values
+      if (object1[key] !== object2[key]) {// else if the key values are not arrays then compare the primitive values
         return false;
       }
 
@@ -54,38 +54,38 @@ const eqObjects = function (object1, object2) {
   return true;
 };
 
-// Nested Objects Tests 
+// Nested Objects Tests
 
-assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true); 
-assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 7 }), false); 
-assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false); 
-assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, y: 0, z: 1, b: 2 }), false); 
-assertEqual(eqObjects({ a: { z: 1, y: {a: 3, b: { g: 7, f: 18} } }, b: 2 }, { a: { z: 1, y: {a: 3, b: { g: 7, f: 18} } }, b: 2 }), true); 
+assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true);
+assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 7 }), false);
+assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false);
+assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, y: 0, z: 1, b: 2 }), false);
+assertEqual(eqObjects({ a: { z: 1, y: {a: 3, b: { g: 7, f: 18} } }, b: 2 }, { a: { z: 1, y: {a: 3, b: { g: 7, f: 18} } }, b: 2 }), true);
 assertEqual(eqObjects({ a: { z: 1, y: {a: 3, b: { g: 7, f: 18} } }, b: 2 }, { a: { z: 1, y: {a: 3, b: { g: 7} } }, b: 2 }), false);
 assertEqual(eqObjects({ a: { z: 1, y: {a: 3, b: { g: 7, f: 18} } }, b: { r: 'Testing', k: { b: 'Testing', c: true}} }, { a: { z: 1, y: {a: 3, b: { g: 7, f: 18} } }, b: { r: 'Testing', k: { b: 'Testing', c: true}} }), true);
 assertEqual(eqObjects({ a: { z: 1, y: {a: 8, b: { g: 7, f: 18} } }, b: { r: 'Testing', k: { b: 'Testing', c: false}} }, { a: { z: 1, y: {a: 3, b: { g: 7} } }, b: { r: 'Testing', k: { b: 'Testing', c: true}} }), false);
 
 
-//Un-Nested Objects Tests 
+//Un-Nested Objects Tests
 
 // Test 1
-console.log('ab vs ba:')
+console.log('ab vs ba:');
 const ab = { a: '1', b: '2' };
 const ba = { b: '2', a: '1' };
 assertEqual(eqObjects(ab, ba), true);
 
 // Test 2
-console.log('ab vs abc:')
+console.log('ab vs abc:');
 const abc = { a: '1', b: '2', c: '3' };
 assertEqual(eqObjects(ab, abc), false);
 
 // Test 3
-console.log('cd vs dc:')
+console.log('cd vs dc:');
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
 assertEqual(eqObjects(cd, dc), true);
 
 // Test 4
-console.log('cd vs cd2:')
+console.log('cd vs cd2:');
 const cd2 = { c: "1", d: ["2", 3, 4] };
-assertEqual(eqObjects(cd, cd2), false);;
+assertEqual(eqObjects(cd, cd2), false);
