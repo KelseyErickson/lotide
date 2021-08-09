@@ -13,7 +13,11 @@ const eqArrays = function(array1, array2) {
     return false;
   }
   for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
+    if(Array.isArray(array1[i])){
+      if(!eqArrays(array1[i], array2[i])){
+        return false;
+      }
+    } else if (array1[i] !== array2[i]) {
       return false;
     }
     
@@ -21,8 +25,18 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-assertEqual(eqArrays([1, 4, 3], [1, 2, 3]), true); // => should FAIL
-assertEqual(eqArrays([1, 4, 3], [1, 2, '3']), true); // => should FAIL
-assertEqual(eqArrays(['hello', 'goodbye', false, 27], ['hello', 'goodbye', false, 27]), true); // => should PASS
-assertEqual(eqArrays([], []), true); // => should PASS
+// Un-nested Array Tests
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); 
+assertEqual(eqArrays([1, 4, 3], [1, 2, 3]), false); 
+assertEqual(eqArrays([1, 4, 3], [1, 2, '3']), false); 
+assertEqual(eqArrays(['hello', 'goodbye', false, 27], ['hello', 'goodbye', false, 27]), true); 
+assertEqual(eqArrays([], []), true);
+
+// Nested Array Tests
+assertEqual(eqArrays([1, [2], 3], [1, [2], 3]), true); 
+assertEqual(eqArrays([1, [2,['A']], 3], [1, [2, ['A']], 3]), true); 
+assertEqual(eqArrays([1, [2,['A']], 3], [1, [2, ['A']], 3]), true); 
+assertEqual(eqArrays([1, [2, ['A']], 3], [1, [2], 3]), false); 
+assertEqual(eqArrays([1, [2, [3], 4],[2 ['A',['Hello']]], 3], [1, [2, [3], 4],[2 ['A',['Hello']]], 3]), true); 
+assertEqual(eqArrays([1, [2, [3], 4],[2 ['A',['Hello']]], 3], [1, [2, [3], 4],[2, ['A']], 3]), false); 
+assertEqual(eqArrays([1, [2, [3], 4],[2 ['A',['Hello', ['Goodbye']]]], 3], [1, [2, [3], 4],[2 ['A',['Hello', ['Goodbye']]]], 3]), true); 
