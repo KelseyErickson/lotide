@@ -26,4 +26,3 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
-
