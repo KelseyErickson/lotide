@@ -54,3 +54,4 @@ assertArraysEqual(results3, []); // Should Pass
 const results4 = map([1], num => num + ' String');
 assertArraysEqual(results4, ['1 String']); // Should Pass
 
+module.exports = map;

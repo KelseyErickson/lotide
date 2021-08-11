@@ -54,3 +54,5 @@ assertEqual(result2['e'], 3);
 assertEqual(result2['n'], 1);
 // This should Fail - we are not counting spaces
 assertEqual(result2[' '], 3);
+
+module.exports = countLetters;

@@ -46,3 +46,5 @@ const bestMusicByGenre = {
 assertEqual(findKeyByValue(bestMusicByGenre, "Nine Inch Nails"), "industrial");
 assertEqual(findKeyByValue(bestMusicByGenre, "Everything Everything"), "pop");
 assertEqual(findKeyByValue(bestMusicByGenre, "Lady Gaga"), undefined);
+
+module.exports = findKeyByValue;

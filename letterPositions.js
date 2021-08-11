@@ -74,3 +74,4 @@ assertArraysEqual(letterPositions('Lighthouse in the house').s, [8, 21]);
 assertArraysEqual(letterPositions('Lighthouse in the house').e, [9, 16, 22]);
 assertArraysEqual(letterPositions('Lighthouse in the house').n, [12]);
 
+module.exports = letterPositions;

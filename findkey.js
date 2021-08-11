@@ -1,3 +1,5 @@
+const { findkey } = require(".");
+
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -61,3 +63,5 @@ assertEqual(findKey({
   'apples':       { status: 'rotton' },
   'grapes':       { status: 'rotton' }
 }, x => x.status === 'rotton'), 'apples'); // => True
+
+module.exports = findKey;

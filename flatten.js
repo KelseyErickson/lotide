@@ -42,3 +42,4 @@ assertArraysEqual(flatten([[6]]), [6]);
 assertArraysEqual(flatten([[]]), []);
 assertArraysEqual(flatten([[true, false], 'Hello', [5, 6, 7]]), [true, false, 'Hello', 5, 6, 7]);
 
+module.exports = flatten;
