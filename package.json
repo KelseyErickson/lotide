@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@kerickson/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "Lotide library project for LHL",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/KelseyErickson/lotide.git"
   },
-  "author": "",
+  "author": "Kelsey Erickson",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/KelseyErickson/lotide/issues"
