@@ -34,20 +34,20 @@ const takeUntil = function(array, callback) {
   }
 };
 
-// Test one
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-assertArraysEqual(takeUntil(data1, x => x < 0), [1, 2, 5, 7, 2]); // Pass
+// // Test one
+// const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
+// assertArraysEqual(takeUntil(data1, x => x < 0), [1, 2, 5, 7, 2]); // Pass
 
-// Test two
-const data2 = ['I\'ve', 'been', 'to', 'Hollywood', ',', 'I\'ve', 'been', 'to', 'Redwood'];
-assertArraysEqual(takeUntil(data2, x => x === ','), ['I\'ve', 'been', 'to', 'Hollywood']); // Pass
+// // Test two
+// const data2 = ['I\'ve', 'been', 'to', 'Hollywood', ',', 'I\'ve', 'been', 'to', 'Redwood'];
+// assertArraysEqual(takeUntil(data2, x => x === ','), ['I\'ve', 'been', 'to', 'Hollywood']); // Pass
 
-// Test three
-const data3 = [27, 'Hello', false, false, true, 'Potato'];
-assertArraysEqual(takeUntil(data3, x => x === true), [27, 'Hello', false, false]); // Pass
+// // Test three
+// const data3 = [27, 'Hello', false, false, true, 'Potato'];
+// assertArraysEqual(takeUntil(data3, x => x === true), [27, 'Hello', false, false]); // Pass
 
-// Test three
-const data4 = [1, 1, 1, 1, 1, 15, 1, 1, 1];
-assertArraysEqual(takeUntil(data4, x => x !== 1), [1, 1, 1, 1, 1]); // Pass
+// // Test three
+// const data4 = [1, 1, 1, 1, 1, 15, 1, 1, 1];
+// assertArraysEqual(takeUntil(data4, x => x !== 1), [1, 1, 1, 1, 1]); // Pass
 
 module.exports = takeUntil;

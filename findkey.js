@@ -22,46 +22,46 @@ const findKey = (object, callback) => {
 };
 
 
-// Test One
+// // Test One
 
-assertEqual(findKey({
-  'Blue Hill': { stars: 1 },
-  'Akaleri':   { stars: 3 },
-  'noma':      { stars: 2 },
-  'elBulli':   { stars: 3 },
-  'Ora':       { stars: 2 },
-  'Akelarre':  { stars: 3 }
-}, x => x.stars === 2), 'noma'); // => True
+// assertEqual(findKey({
+//   'Blue Hill': { stars: 1 },
+//   'Akaleri':   { stars: 3 },
+//   'noma':      { stars: 2 },
+//   'elBulli':   { stars: 3 },
+//   'Ora':       { stars: 2 },
+//   'Akelarre':  { stars: 3 }
+// }, x => x.stars === 2), 'noma'); // => True
 
-//Test Two
+// //Test Two
 
-assertEqual(findKey({
-  'Blue Hill': { stars: 1 },
-  'Akaleri':   { stars: 3 },
-  'noma':      { stars: 2 },
-  'elBulli':   { stars: 3 },
-  'Ora':       { stars: 2 },
-  'Akelarre':  { stars: 3 }
-}, x => x.stars === 4), undefined); // => True
+// assertEqual(findKey({
+//   'Blue Hill': { stars: 1 },
+//   'Akaleri':   { stars: 3 },
+//   'noma':      { stars: 2 },
+//   'elBulli':   { stars: 3 },
+//   'Ora':       { stars: 2 },
+//   'Akelarre':  { stars: 3 }
+// }, x => x.stars === 4), undefined); // => True
 
-//Test Three
+// //Test Three
 
-assertEqual(findKey({
-  'blueberries': 1 ,
-  'strawberries': 3 ,
-  'melons': 2 ,
-  'bananas': 3 ,
-}, x => x === 3), 'strawberries'); // => True
+// assertEqual(findKey({
+//   'blueberries': 1 ,
+//   'strawberries': 3 ,
+//   'melons': 2 ,
+//   'bananas': 3 ,
+// }, x => x === 3), 'strawberries'); // => True
 
-// Test Four
+// // Test Four
 
-assertEqual(findKey({
-  'blueberries':  { status: 'good'},
-  'strawberries': { status: 'good' },
-  'melons':       { status: 'good' },
-  'bananas':      { status: 'good'},
-  'apples':       { status: 'rotton' },
-  'grapes':       { status: 'rotton' }
-}, x => x.status === 'rotton'), 'apples'); // => True
+// assertEqual(findKey({
+//   'blueberries':  { status: 'good'},
+//   'strawberries': { status: 'good' },
+//   'melons':       { status: 'good' },
+//   'bananas':      { status: 'good'},
+//   'apples':       { status: 'rotton' },
+//   'grapes':       { status: 'rotton' }
+// }, x => x.status === 'rotton'), 'apples'); // => True
 
 module.exports = findKey;

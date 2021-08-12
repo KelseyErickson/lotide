@@ -37,9 +37,9 @@ const flatten = function(array) {
   return flattenArray;
 };
 
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
-assertArraysEqual(flatten([[6]]), [6]);
-assertArraysEqual(flatten([[]]), []);
-assertArraysEqual(flatten([[true, false], 'Hello', [5, 6, 7]]), [true, false, 'Hello', 5, 6, 7]);
+// assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+// assertArraysEqual(flatten([[6]]), [6]);
+// assertArraysEqual(flatten([[]]), []);
+// assertArraysEqual(flatten([[true, false], 'Hello', [5, 6, 7]]), [true, false, 'Hello', 5, 6, 7]);
 
 module.exports = flatten;

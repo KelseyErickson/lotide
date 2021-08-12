@@ -34,24 +34,24 @@ const map = (array, callback) => {
   return results;
 };
 
-// Test 1
+// // Test 1
 
-const words = ['ground', 'control', 'to', 'major', 'tom'];
-const results1 = map(words, word => word[0]);
-assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']); // Should Pass
+// const words = ['ground', 'control', 'to', 'major', 'tom'];
+// const results1 = map(words, word => word[0]);
+// assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']); // Should Pass
 
-// Test 2
+// // Test 2
 
-const results2 = map([1, 2, 3, 4, 5, 6], num => num * 2);
-assertArraysEqual(results2, [2, 4, 6, 8, 10, 12]); // Should Pass
+// const results2 = map([1, 2, 3, 4, 5, 6], num => num * 2);
+// assertArraysEqual(results2, [2, 4, 6, 8, 10, 12]); // Should Pass
 
-// Test 3
+// // Test 3
 
-const results3 = map([], num => num * 2);
-assertArraysEqual(results3, []); // Should Pass
+// const results3 = map([], num => num * 2);
+// assertArraysEqual(results3, []); // Should Pass
 
-// Test 4
-const results4 = map([1], num => num + ' String');
-assertArraysEqual(results4, ['1 String']); // Should Pass
+// // Test 4
+// const results4 = map([1], num => num + ' String');
+// assertArraysEqual(results4, ['1 String']); // Should Pass
 
 module.exports = map;

@@ -50,28 +50,28 @@ const letterPositions = function(sentence) {
 
 // All these tests should pass
 
-console.log('Results for \'hello\'');
-assertArraysEqual(letterPositions('hello').h, [0]);
-assertArraysEqual(letterPositions('hello').e, [1]);
-assertArraysEqual(letterPositions('hello').l, [2, 3]);
-assertArraysEqual(letterPositions('hello').o, [4]);
+// console.log('Results for \'hello\'');
+// assertArraysEqual(letterPositions('hello').h, [0]);
+// assertArraysEqual(letterPositions('hello').e, [1]);
+// assertArraysEqual(letterPositions('hello').l, [2, 3]);
+// assertArraysEqual(letterPositions('hello').o, [4]);
 
 
-// Test 2
+// // Test 2
 
 
 
-// These should all pass
-console.log('Results for \'Lighthouse in the house\'');
-assertArraysEqual(letterPositions('Lighthouse in the house').L, [0]);
-assertArraysEqual(letterPositions('Lighthouse in the house').i, [1, 11]);
-assertArraysEqual(letterPositions('Lighthouse in the house').g, [2]);
-assertArraysEqual(letterPositions('Lighthouse in the house').h, [3, 5, 15, 18]);
-assertArraysEqual(letterPositions('Lighthouse in the house').t, [4, 14]);
-assertArraysEqual(letterPositions('Lighthouse in the house').o, [6, 19]);
-assertArraysEqual(letterPositions('Lighthouse in the house').u, [7, 20]);
-assertArraysEqual(letterPositions('Lighthouse in the house').s, [8, 21]);
-assertArraysEqual(letterPositions('Lighthouse in the house').e, [9, 16, 22]);
-assertArraysEqual(letterPositions('Lighthouse in the house').n, [12]);
+// // These should all pass
+// console.log('Results for \'Lighthouse in the house\'');
+// assertArraysEqual(letterPositions('Lighthouse in the house').L, [0]);
+// assertArraysEqual(letterPositions('Lighthouse in the house').i, [1, 11]);
+// assertArraysEqual(letterPositions('Lighthouse in the house').g, [2]);
+// assertArraysEqual(letterPositions('Lighthouse in the house').h, [3, 5, 15, 18]);
+// assertArraysEqual(letterPositions('Lighthouse in the house').t, [4, 14]);
+// assertArraysEqual(letterPositions('Lighthouse in the house').o, [6, 19]);
+// assertArraysEqual(letterPositions('Lighthouse in the house').u, [7, 20]);
+// assertArraysEqual(letterPositions('Lighthouse in the house').s, [8, 21]);
+// assertArraysEqual(letterPositions('Lighthouse in the house').e, [9, 16, 22]);
+// assertArraysEqual(letterPositions('Lighthouse in the house').n, [12]);
 
 module.exports = letterPositions;
